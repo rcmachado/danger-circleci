@@ -8,6 +8,9 @@ Interact with CircleCI artifacts
 
     $ gem install danger-circleci
 
+Currently we test on ruby 2.3.4 and 2.4.1, but probably runs fine on
+other versions.
+
 ## Usage
 
 <blockquote>To show links to artifacts

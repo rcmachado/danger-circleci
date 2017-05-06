@@ -1,5 +1,7 @@
 # danger-circleci
 
+[![Build Status](https://travis-ci.org/rcmachado/danger-circleci.svg?branch=master)](https://travis-ci.org/rcmachado/danger-circleci)
+
 Interact with CircleCI artifacts
 
 ## Installation

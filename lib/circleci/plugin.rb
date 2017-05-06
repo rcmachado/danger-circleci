@@ -1,23 +1,26 @@
 module Danger
-  # This is your plugin class. Any attributes or methods you expose here will
-  # be available from within your Dangerfile.
+  # Interact with CircleCI artifacts
   #
-  # To be published on the Danger plugins site, you will need to have
-  # the public interface documented. Danger uses [YARD](http://yardoc.org/)
-  # for generating documentation from your plugin source, and you can verify
-  # by running `danger plugins lint` or `bundle exec rake spec`.
+  # @example To show links to artifacts
   #
-  # You should replace these comments with a public description of your library.
+  #          artifacts = [
+  #            {
+  #              'message' => 'Test Report',
+  #              'path' => "#{ENV['CIRCLE_TEST_REPORTS']}/test/report.html"
+  #            },
+  #            {
+  #              'message' => 'Code Coverage Report',
+  #              'path' => "#{ENV['CIRCLE_TEST_REPORTS']}/cov/index.html"
+  #            }
+  #          ]
+  #          circleci.artifacts_links artifacts
   #
-  # @example Ensure people are well warned about merging on Mondays
-  #
-  #          my_plugin.warn_on_mondays
   #
   # @see  /danger-circleci
-  # @tags monday, weekends, time, rattata
+  # @tags circleci, build, artifacts
   #
   class DangerCircleci < Plugin
-    # Show links for the artifacts mentioned
+    # Show links for build artifacts
     #
     # @param   [Array<String>] artifacts
     #          List of maps for the artifacts, using 'message' and 'path' keys

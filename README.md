@@ -1,6 +1,6 @@
 # danger-circleci
 
-A description of danger-circleci.
+Interact with CircleCI artifacts
 
 ## Installation
 
@@ -8,8 +8,25 @@ A description of danger-circleci.
 
 ## Usage
 
-    Methods and attributes from this plugin are available in
-    your `Dangerfile` under the `circleci` namespace.
+<blockquote>To show links to artifacts
+  <pre>
+artifacts = [
+  {
+    'title' => 'Test Report',
+    'path' => "#{ENV['CIRCLE_TEST_REPORTS']}/test/report.html"
+  },
+  {
+    'title' => 'Code Coverage Report',
+    'path' => "#{ENV['CIRCLE_TEST_REPORTS']}/cov/index.html"
+  }
+]
+circleci.artifacts_links artifacts</pre>
+</blockquote>
+
+### Methods
+
+`artifacts_links` - Show links for build artifacts
+`should_display_message` - Checks if we can display the links to artifacts
 
 ## Development
 

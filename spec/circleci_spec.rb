@@ -52,7 +52,7 @@ module Danger
           it 'should format messages as links' do
             artifacts = [
               {
-                'message' => 'Test artifact',
+                'title' => 'Test artifact',
                 'path' => '/tmp/my-file.txt'
               }
             ]

@@ -5,11 +5,11 @@ module Danger
   #
   #          artifacts = [
   #            {
-  #              'message' => 'Test Report',
+  #              'title' => 'Test Report',
   #              'path' => "#{ENV['CIRCLE_TEST_REPORTS']}/test/report.html"
   #            },
   #            {
-  #              'message' => 'Code Coverage Report',
+  #              'title' => 'Code Coverage Report',
   #              'path' => "#{ENV['CIRCLE_TEST_REPORTS']}/cov/index.html"
   #            }
   #          ]
@@ -31,7 +31,7 @@ module Danger
       message = ''
 
       artifacts.each do |artifact|
-        title = artifact['message']
+        title = artifact['title']
         link = artifact_link(artifact)
 
         message << "[#{title}](#{link})"

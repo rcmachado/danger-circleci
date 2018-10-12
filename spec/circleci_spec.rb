@@ -17,13 +17,17 @@ module Danger
 
       context 'environment variables not set' do
         before do
-          allow(ENV).to receive(:[]).with('CIRCLE_PROJECT_USERNAME')
+          allow(ENV).to receive(:[])
+            .with('CIRCLE_PROJECT_USERNAME')
             .and_return('')
-          allow(ENV).to receive(:[]).with('CIRCLE_PROJECT_NAME')
+          allow(ENV).to receive(:[])
+            .with('CIRCLE_PROJECT_NAME')
             .and_return('')
-          allow(ENV).to receive(:[]).with('CIRCLE_BUILD_NUM')
+          allow(ENV).to receive(:[])
+            .with('CIRCLE_BUILD_NUM')
             .and_return('')
-          allow(ENV).to receive(:[]).with('CIRCLE_NODE_INDEX')
+          allow(ENV).to receive(:[])
+            .with('CIRCLE_NODE_INDEX')
             .and_return('')
         end
 
@@ -34,13 +38,17 @@ module Danger
 
       context 'environment variables set' do
         before do
-          allow(ENV).to receive(:[]).with('CIRCLE_PROJECT_USERNAME')
+          allow(ENV).to receive(:[])
+            .with('CIRCLE_PROJECT_USERNAME')
             .and_return('user')
-          allow(ENV).to receive(:[]).with('CIRCLE_PROJECT_NAME')
+          allow(ENV).to receive(:[])
+            .with('CIRCLE_PROJECT_NAME')
             .and_return('project')
-          allow(ENV).to receive(:[]).with('CIRCLE_BUILD_NUM')
+          allow(ENV).to receive(:[])
+            .with('CIRCLE_BUILD_NUM')
             .and_return('123')
-          allow(ENV).to receive(:[]).with('CIRCLE_NODE_INDEX')
+          allow(ENV).to receive(:[])
+            .with('CIRCLE_NODE_INDEX')
             .and_return('1')
         end
 

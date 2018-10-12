@@ -3,3 +3,4 @@ Style/BlockLength:
     - 'Rakefile'
     - '**/*.rake'
     - 'test/**/*.rb'
+    - 'spec/**/*.rb'
